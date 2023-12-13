@@ -46,11 +46,11 @@ type SELinuxType struct {
 type KubeArmorPolicySpec struct {
 	Selector SelectorType `json:"selector,omitempty"`
 
-	Process      ProcessType      `json:"process,omitempty"`
-	File         FileType         `json:"file,omitempty"`
-	Network      NetworkType      `json:"network,omitempty"`
-	Capabilities CapabilitiesType `json:"capabilities,omitempty"`
-	Syscalls     SyscallsType     `json:"syscalls,omitempty"`
+	Process      *ProcessType      `json:"process,omitempty"`
+	File         *FileType         `json:"file,omitempty"`
+	Network      *NetworkType      `json:"network,omitempty"`
+	Capabilities *CapabilitiesType `json:"capabilities,omitempty"`
+	Syscalls     SyscallsType      `json:"syscalls,omitempty"`
 
 	AppArmor string `json:"apparmor,omitempty"`
 
